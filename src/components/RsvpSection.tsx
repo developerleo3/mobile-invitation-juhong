@@ -211,20 +211,20 @@ export default function RsvpSection({ showToast, open, onOpen, onClose }: Props)
                         <div className="px-6 pt-10 pb-8">
                             <div className="flex items-center justify-center gap-4 font-gowun-batang text-[11px]">
                                 <p>
-                                    <span className="font-bold">신랑</span> 허성택
+                                    <span className="font-bold">신랑</span> 이주홍
                                 </p>
                                 <img src="/svgs/heart.svg" alt="heart" className="h-3 w-3" />
                                 <p>
-                                    <span className="font-bold">신부</span> 이현정
+                                    <span className="font-bold">신부</span> 최미향
                                 </p>
                             </div>
 
                             <div className="mt-7 font-gowun-batang text-[11px] font-bold">
-                                <div>2026년 5월 9일</div>
-                                <div>토요일 오후6시30분</div>
+                                <div>2026년 10월 17일</div>
+                                <div>토요일 오전 11시</div>
                             </div>
 
-                            <div className="mt-3 font-gowun-batang text-[11px] font-bold">빌라드지디 논현</div>
+                            <div className="mt-3 font-gowun-batang text-[11px] font-bold">대전 유성컨벤션웨딩홀 2층 팰리스홀</div>
 
                             <button
                                 type="button"
@@ -246,7 +246,7 @@ export default function RsvpSection({ showToast, open, onOpen, onClose }: Props)
                     꼭 오셔서 축복해 주세요.
                     <br />
                     <br />
-                    신랑 허성택 · 신부 이현정 드림
+                    신랑 이주홍 · 신부 최미향 드림
                 </div>
             </FadeInOnView>
 

@@ -127,15 +127,15 @@ export default function WithLoveSection({
     const [openSide, setOpenSide] = useState<"groom" | "bride" | null>(null);
 
     const groomAccounts: AccountItem[] = [
-        {role: "신랑", name: "허성택", bank: "국민", account: "459002-04-177607"},
-        {role: "신랑 아버지", name: "허정행", bank: "새마을금고", account: "9003-2674-8822-2"},
-        {role: "신랑 어머니", name: "박성연", bank: "농협", account: "352-1351-2482-33"},
+        {role: "신랑", name: "이주홍", bank: "국민", account: "933502-00-045309"},
+        {role: "신랑 아버지", name: "이연수", bank: "카카오뱅크", account: "3333-28-2846025"},
+        {role: "신랑 어머니", name: "김정화", bank: "농협", account: "352-2652-5605-63"},
     ];
 
     const brideAccounts: AccountItem[] = [
-        {role: "신부", name: "이현정", bank: "국민", account: "801702-04-127656"},
-        {role: "신부 아버지", name: "이형석", bank: "신한", account: "110-156-846385"},
-        {role: "신부 어머니", name: "유정란", bank: "신한", account: "110-058-608670"},
+        {role: "신부", name: "최미향", bank: "국민", account: "453014-52-249687"},
+        {role: "신부 아버지", name: "최종구", bank: "신협", account: "132-106-160188"},
+        {role: "신부 어머니", name: "박준하", bank: "농협", account: "415-02-385621"},
     ];
 
     return (

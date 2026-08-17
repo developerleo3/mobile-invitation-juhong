@@ -43,7 +43,8 @@ const MapModal = ({
 
     if (!open) return null;
 
-    return (
+    // 지도 확대 보기
+    /*return (
         <div className="fixed inset-0 z-9998" role="dialog" aria-modal="true">
             <button
                 type="button"
@@ -100,7 +101,7 @@ const MapModal = ({
                 </div>
             </div>
         </div>
-    );
+    );*/
 };
 
 export default function LocationSection({copyText}: Props) {
@@ -117,144 +118,54 @@ export default function LocationSection({copyText}: Props) {
 
                 <FadeInOnView>
                     <div className="mt-7">
-                        <div className="text-[13px] font-noto-sans-kr font-semibold">빌라드지디 논현</div>
-
-                        <div
-                            className="mt-7 flex items-center justify-center text-[11px] text-black font-gowun-batang font-normal">
-                            <p>
-                                하우스웨딩으로 진행되어 주차가 어려운 점 양해 부탁드립니다.
-                                <br/>
-                                셔틀버스를 준비하였으니 대중교통 이용해주시면 감사하겠습니다.
-                            </p>
+                        <div className="text-[13px] font-noto-sans-kr font-semibold">대전 유성컨벤션웨딩홀 2층 팰리스홀</div>
+                        <div className="mt-7 flex justify-center items-center gap-2">
+                            <p className="text-[13px] font-noto-sans-kr font-semibold">대전광역시 유성구 온천북로 77</p>
+                            <button
+                                type="button"
+                                onClick={() => copyText("대전광역시 유성구 온천북로 77")}
+                                className="shrink-0 active:scale-[0.9]"
+                                aria-label="웨딩홀 주소 복사"
+                            >
+                                <img src="/svgs/copy.svg" alt="copy" className="h-3 w-3"/>
+                            </button>
+                        </div>
+                        <div className="mt-1 flex justify-center items-center gap-2">
+                            <p className="text-[13px] font-noto-sans-kr font-normal">지번 | 대전광역시 유성구 봉명동 692-4</p>
+                            <button
+                                type="button"
+                                onClick={() => copyText("대전광역시 유성구 봉명동 692-4")}
+                                className="shrink-0 active:scale-[0.9]"
+                                aria-label="웨딩홀 주소 복사(지번)"
+                            >
+                                <img src="/svgs/copy.svg" alt="copy" className="h-3 w-3"/>
+                            </button>
                         </div>
                     </div>
                 </FadeInOnView>
 
                 <FadeInOnView>
-                    <button
-                        type="button"
-                        onClick={() => setMapOpen(true)}
-                        className="mt-6 block w-full px-3 active:scale-[0.995]"
-                        aria-label="지도 확대 보기"
-                    >
-                        <div className="overflow-hidden border border-[#EFEFEF]">
+                    {/*<button*/}
+                    {/*    type="button"*/}
+                    {/*    onClick={() => setMapOpen(true)}*/}
+                    {/*    className="mt-6 block w-full px-3 active:scale-[0.995]"*/}
+                    {/*    aria-label="지도 확대 보기"*/}
+                    {/*>*/}
+                        <div className="mt-6 px-3 w-full overflow-hidden border border-[#EFEFEF]">
                             <Image
-                                src="/images/location.jpg"
+                                src="/images/location01.jpg"
                                 alt="map"
                                 width={900}
                                 height={560}
                                 className="h-auto w-full"
                             />
                         </div>
-                    </button>
-                    <p className="mt-3 font-noto-sans-kr font-semibold text-[9px]">지도를 클릭하시면 크게 보기가 가능합니다</p>
+                    {/*</button>*/}
+                    {/*<p className="mt-3 font-noto-sans-kr font-semibold text-[9px]">지도를 클릭하시면 크게 보기가 가능합니다</p>*/}
                 </FadeInOnView>
 
                 <div className="px-6 mt-8 text-left">
-                    {/* S - 지하철 */}
-                    <FadeInOnView>
-                        <div className="flex gap-2">
-                            <div className="h-4 w-4 shrink-0 flex mt-0.5 items-center justify-center">
-                                <img
-                                    src="/svgs/bus.svg"
-                                    alt="subway"
-                                    className="h-[16px] w-[16px]"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <div className="font-noto-sans-kr text-[13px] font-semibold">지하철 이용 시</div>
-                                <div className="mt-3 space-y-2 text-[12px] font-noto-sans-kr">
-                                    <p className="font-semibold">7호선, 분당선 강남구청역 2번출구</p>
-                                </div>
-                                <div
-                                    className="mt-1 space-y-1 text-[11px] text-[#6B6B6B] font-noto-sans-kr leading-relaxed">
-                                    <p>*2번 출구 20m 직진, 버스승강장 옆 셔틀버스 이용</p>
-                                </div>
-                            </div>
-                        </div>
-                    </FadeInOnView>
-
-                    {/* B - 버스 */}
-                    <FadeInOnView>
-                        <div className="mt-6 flex gap-2">
-                            <div className="h-4 w-4 shrink-0 flex mt-0.5 items-center justify-center">
-                                <img
-                                    src="/svgs/subway.svg"
-                                    alt="bus"
-                                    className="h-[16px] w-[16px]"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <div className="font-noto-sans-kr text-[13px] font-semibold">버스 이용 시</div>
-                                <div className="mt-3 space-y-0.5 text-[12px] font-noto-sans-kr">
-                                    <p className="font-semibold">242, 401, 3414, 301번 강남구청역 하차</p>
-                                    <p className="font-semibold">342, 472, 3426, 4312번 강남보건소 하차</p>
-                                </div>
-                                <div
-                                    className="mt-1 space-y-1 text-[11px] text-[#6B6B6B] font-noto-sans-kr leading-relaxed">
-                                    <p>*7호선, 분당선 강남구청역 2번출구에서 셔틀버스 이용</p>
-                                </div>
-                            </div>
-                        </div>
-                    </FadeInOnView>
-
-                    {/* P - 자가용 */}
-                    <FadeInOnView>
-                        <div className="mt-6 flex gap-2">
-                            <div className="h-4 w-4 shrink-0 flex mt-0.5 items-center justify-center">
-                                <img
-                                    src="/svgs/car.svg"
-                                    alt="car"
-                                    className="h-[16px] w-[16px]"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <div className="font-noto-sans-kr text-[13px] font-semibold">자가용 이용 시</div>
-
-                                <div className="mt-3 space-y-0.5 text-[12px] font-noto-sans-kr">
-                                    <div className="flex items-center gap-2">
-                                        <p className="font-semibold">
-                                            제1주차장 :
-                                            <span className="font-normal text-[12px]"> 서울 강남구 언주로126길 23 (논현동)</span>
-                                        </p>
-
-                                        <button
-                                            type="button"
-                                            onClick={() => copyText("서울 강남구 언주로126길 23 (논현동)")}
-                                            className="shrink-0 active:scale-[0.9]"
-                                            aria-label="제1주차장 주소 복사"
-                                        >
-                                            <img src="/svgs/copy.svg" alt="copy" className="h-3 w-3"/>
-                                        </button>
-                                    </div>
-
-                                    <div className="flex items-center gap-2">
-                                        <p className="font-semibold">
-                                            제2주차장 :
-                                            <span className="font-normal text-[12px]"> 서울 강남구 학동로 342 에스케이 허브블루</span>
-                                        </p>
-
-                                        <button
-                                            type="button"
-                                            onClick={() => copyText("서울 강남구 학동로 342 에스케이 허브블루")}
-                                            className="shrink-0 active:scale-[0.9]"
-                                            aria-label="제2주차장 주소 복사"
-                                        >
-                                            <img src="/svgs/copy.svg" alt="copy" className="h-3 w-3"/>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div
-                                    className="mt-1 space-y-0.5 text-[11px] text-[#6B6B6B] font-noto-sans-kr leading-relaxed">
-                                    <p>*제1주차장은 발렛주차로 만차시 제2주차장으로 안내해드립니다.</p>
-                                    <p>*제2주차장은 도보 10분 / 셔틀이용 가능합니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </FadeInOnView>
-
-                    {/* 셔틀버스 */}
+                    {/* 대중교통 */}
                     <FadeInOnView>
                         <div className="mt-6 flex gap-2">
                             <div className="h-4 w-4 shrink-0 flex mt-0.5 items-center justify-center">
@@ -265,20 +176,22 @@ export default function LocationSection({copyText}: Props) {
                                 />
                             </div>
                             <div className="flex-1">
-                                <div className="font-noto-sans-kr text-[13px] font-semibold">셔틀버스 운행 시간</div>
+                                <div className="font-noto-sans-kr text-[13px] font-semibold">대중교통 이용시</div>
                                 <div className="mt-3 space-y-0.5 text-[12px] font-noto-sans-kr">
-                                    <p className="font-semibold">17:30 - 19:00 (90분간)</p>
-                                    <p className="font-semibold">19:30 - 20:30 (60분간)</p>
+                                    <p className="font-semibold"><span className="text-[#AC5344] mr-1">시내버스</span> 102번, 108번, 706번, 106번, 113번 버스</p>
                                 </div>
                                 <div
                                     className="mt-1 space-y-1 text-[11px] text-[#6B6B6B] font-noto-sans-kr leading-relaxed">
-                                    <p>*10분 간격으로 운행</p>
+                                    <p>*홈플러스 유성점 하차</p>
+                                </div>
+                                <div className="mt-1 space-y-0.5 text-[12px] font-noto-sans-kr">
+                                    <p className="font-semibold"><span className="text-[#AC5344] mr-4.5">지하철</span>1호선 갑천역 3번 출구 (돌다리 건너편)</p>
                                 </div>
                             </div>
                         </div>
                     </FadeInOnView>
 
-                    {/* 대절버스 */}
+                    {/* 고속버스 */}
                     <FadeInOnView>
                         <div className="mt-6 flex gap-2">
                             <div className="h-4 w-4 shrink-0 flex mt-0.5 items-center justify-center">
@@ -289,48 +202,66 @@ export default function LocationSection({copyText}: Props) {
                                 />
                             </div>
                             <div className="flex-1">
-                                <div className="font-noto-sans-kr text-[13px] font-semibold">대절버스 이용 시</div>
+                                <div className="font-noto-sans-kr text-[13px] font-semibold">고속버스 이용시</div>
+                                <div className="mt-3 space-y-0.5 text-[12px] font-noto-sans-kr">
+                                    <p className="font-semibold text-[#AC5344]">대전고속버스터미널</p>
+                                </div>
+                                <div
+                                    className="mt-1 space-y-1 text-[11px] text-[#6B6B6B] font-noto-sans-kr leading-relaxed">
+                                    <p>*버스 102번, 106번 탑승 후 홈플러스 유성점에서 하차</p>
+                                </div>
+                                <div className="mt-1 space-y-0.5 text-[12px] font-noto-sans-kr">
+                                    <p className="font-semibold text-[#AC5344]">유성고속버스터미널</p>
+                                </div>
+                                <div
+                                    className="mt-1 space-y-1 text-[11px] text-[#6B6B6B] font-noto-sans-kr leading-relaxed">
+                                    <p>*도보 500m 후 102번 버스 탑승 &gt; 홈플러스 유성점에서 하차</p>
+                                </div>
+                            </div>
+                        </div>
+                    </FadeInOnView>
+
+                    {/* 자가용 */}
+                    <FadeInOnView>
+                        <div className="mt-6 flex gap-2">
+                            <div className="h-4 w-4 shrink-0 flex mt-0.5 items-center justify-center">
+                                <img
+                                    src="/svgs/shuttle.svg"
+                                    alt="shuttle"
+                                    className="h-[16px] w-[16px]"
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <div className="font-noto-sans-kr text-[13px] font-semibold">자가용 이용시</div>
                                 <div className="mt-3 space-y-0.5 text-[12px] font-noto-sans-kr">
                                     <div className="flex items-center gap-2">
-                                        <p className="font-semibold">출발지 (13:00) :&nbsp;
-                                            <span className="font-normal">경산시 원효로 28길 20</span>
-                                        </p>
-                                        <button
-                                            type="button"
-                                            onClick={() => copyText("경산시 원효로 28길 20")}
-                                            className="shrink-0 active:scale-[0.9]"
-                                            aria-label="출발지 주소 복사"
-                                        >
-                                            <img src="/svgs/copy.svg" alt="copy" className="h-3 w-3"/>
-                                        </button>
+                                        <p className="font-semibold">유성IC &gt; 홈플러스 유성점 &gt; 갑천변 유성컨벤션웨딩홀</p>
                                     </div>
                                     <div className="space-y-0.5 text-[12px] font-noto-sans-kr">
                                         <div className="flex items-center gap-2">
-                                            <p className="font-semibold">경유지 (13:30) :&nbsp;
-                                                <span className="font-normal">대구스타디움 제2주차장</span>
+                                            <p className="font-semibold text-[#AC5344]">주차 :&nbsp;
+                                                <span className="font-normal">유성컨벤션웨딩홀</span>
                                             </p>
                                             <button
                                                 type="button"
-                                                onClick={() => copyText("대구 수성구 노변동 650")}
+                                                onClick={() => copyText("대전 유성구 온천북로 77")}
                                                 className="shrink-0 active:scale-[0.9]"
-                                                aria-label="대구스타디움 제2주차장 주소 복사"
+                                                aria-label="유성컨벤션웨딩홀 주소 복사"
                                             >
                                                 <img src="/svgs/copy.svg" alt="copy" className="h-3 w-3"/>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    className="mt-1 space-y-0.5 text-[11px] text-[#6B6B6B] font-noto-sans-kr">
-                                    <p>* 대구스타디움 주차장 이용 시 주차비는 무료입니다.</p>
-                                    <p>* 제2주차장 집결이며, 만차 시 제3주차장을 이용해 주세요.</p>
+                                <div className="mt-1 space-y-0.5 text-[11px] text-[#6B6B6B] font-noto-sans-kr">
+                                    <p>*도착 후 안내에 따라 이용</p>
                                 </div>
                             </div>
                         </div>
                     </FadeInOnView>
                 </div>
 
-                <FadeInOnView>
+                {/*<FadeInOnView>
                     <div className="px-6 mt-6">
                         <a
                             href="https://nonhyeonvilladegd.com/86"
@@ -343,7 +274,7 @@ export default function LocationSection({copyText}: Props) {
                             주차 안내
                         </a>
                     </div>
-                </FadeInOnView>
+                </FadeInOnView>*/}
             </section>
 
             <MapModal open={mapOpen} onClose={() => setMapOpen(false)}/>

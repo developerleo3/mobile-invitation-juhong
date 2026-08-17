@@ -76,9 +76,9 @@ export default function EntryRsvpPopup({
                     </div>
 
                     <div className="mt-5 font-gowun-batang text-[10.5px] font-bold leading-relaxed">
-                        <p>신랑 허성택 · 신부 이현정</p>
-                        <p>2026년 5월 9일 토요일 오후6시30분</p>
-                        <p>빌라드지디 논현</p>
+                        <p>신랑 이주홍 · 신부 최미향</p>
+                        <p>2026년 10월 17일 토요일 오전 11시</p>
+                        <p>대전 유성컨벤션웨딩홀 2층 팰리스홀</p>
                     </div>
 
                     <div className="mt-7 space-y-4">

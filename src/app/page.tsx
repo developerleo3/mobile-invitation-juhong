@@ -14,7 +14,12 @@ import InformationSection from "@/src/components/InformationSection";
 import Footer from "@/src/components/Footer";
 import MusicPlayer from "@/src/components/MusicPlayer";
 import DayAlbumSection from "@/src/components/DayAlbumSection";
-import EntryDayAlbumPopup from "@/src/components/EntryDayAlbumPopup";
+
+// 사진공유 첫 진입 팝업
+// import EntryDayAlbumPopup from "@/src/components/EntryDayAlbumPopup";
+
+// RSVP 첫 진입 팝업
+import EntryRsvpPopup from "@/src/components/EntryRsvpPopup";
 
 export default function Home() {
     // ==========================================================
@@ -84,8 +89,35 @@ export default function Home() {
     // ==========================================================
     // 첫 진입 RSVP 팝업 / RSVP 모달 상태
     // ==========================================================
-    const [entryPopupOpen, setEntryPopupOpen] = useState(true);
+
+    // 사진공유 팝업
+    const [entryPopupOpen, setEntryPopupOpen] = useState(false);
     const [rsvpOpen, setRsvpOpen] = useState(false);
+
+    useEffect(() => {
+        const today = new Date().toISOString().slice(0, 10);
+        const hiddenDate = localStorage.getItem("hide-entry-rsvp-popup-date");
+
+        if (hiddenDate !== today) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setEntryPopupOpen(true);
+        }
+    }, []);
+
+    const closeEntryPopup = () => {
+        setEntryPopupOpen(false);
+    };
+
+    const hideEntryPopupToday = () => {
+        const today = new Date().toISOString().slice(0, 10);
+        localStorage.setItem("hide-entry-rsvp-popup-date", today);
+        setEntryPopupOpen(false);
+    };
+
+    const openRsvpFromEntryPopup = () => {
+        setEntryPopupOpen(false);
+        setRsvpOpen(true);
+    };
 
     const isAnyModalOpen = entryPopupOpen || rsvpOpen;
     // ==========================================================
@@ -97,9 +129,11 @@ export default function Home() {
                 <MusicPlayer />
 
                 {/* 첫 진입 팝업 */}
-                <EntryDayAlbumPopup
+                <EntryRsvpPopup
                     open={entryPopupOpen}
-                    onClose={() => setEntryPopupOpen(false)}
+                    onClose={closeEntryPopup}
+                    onHideToday={hideEntryPopupToday}
+                    onOpenRsvp={openRsvpFromEntryPopup}
                 />
 
                 {/* section01 - Main */}
@@ -124,7 +158,7 @@ export default function Home() {
                 <MessageSection showToast={showToast} />
 
                 {/* section8 - Information */}
-                <InformationSection />
+                {/*<InformationSection />*/}
 
                 {/* section9 - RSVP */}
                 <RsvpSection
@@ -135,9 +169,9 @@ export default function Home() {
                 />
 
                 {/* section10 - DayAlbum */}
-                <section id="section10">
-                    <DayAlbumSection />
-                </section>
+                {/*<section id="section10">*/}
+                {/*    <DayAlbumSection />*/}
+                {/*</section>*/}
 
                 {/* footer */}
                 <Footer />

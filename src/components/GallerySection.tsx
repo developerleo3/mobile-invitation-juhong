@@ -18,24 +18,24 @@ const preventDefault = (e: React.SyntheticEvent) => {
 
 export default function GallerySection({ images, className }: Props) {
     const defaultImages = useMemo(
-        () => Array.from({ length: 40 }, (_, i) => `/images/gallery/gallery_${i + 1}.jpg`),
+        () => Array.from({ length: 17 }, (_, i) => `/images/gallery/gallery${i + 1}.jpg`),
         []
     );
 
     const finalImages = images?.length ? images : defaultImages;
 
     const thumbs = useMemo(() => {
-        const selectedIndexes = [1, 5, 17, 14, 35, 32];
+        const selectedIndexes = [1, 5, 7, 8, 11, 16];
         return selectedIndexes.map((i) => finalImages[i]);
     }, [finalImages]);
 
     const thumbStyle = [
-        { pos: "object-[50%_25%]", scale: "scale-100" },
-        { pos: "object-[50%_5%]", scale: "scale-100" },
-        { pos: "object-[50%_40%]", scale: "scale-100" },
+        { pos: "object-[50%_10%]", scale: "scale-100" },
+        { pos: "object-[20%_05%]", scale: "scale-100" },
+        { pos: "object-[50%_30%]", scale: "scale-100" },
         { pos: "object-[50%_70%]", scale: "scale-100" },
         { pos: "object-[50%_60%]", scale: "scale-100" },
-        { pos: "object-[50%_50%]", scale: "scale-100" },
+        { pos: "object-[50%_10%]", scale: "scale-100" },
     ] as const;
 
     const [open, setOpen] = useState(false);
@@ -318,13 +318,13 @@ export default function GallerySection({ images, className }: Props) {
                     />
 
                     {/* 상단 로고 */}
-                    <div className="absolute left-1/2 top-8 z-20 -translate-x-1/2">
+                    {/*<div className="absolute left-1/2 top-6 z-20 -translate-x-1/2">
                         <img
                             src="/svgs/taek&jung.svg"
                             alt="Taek & Jung"
                             className="h-auto w-[100px] max-w-[45vw]"
                         />
-                    </div>
+                    </div>*/}
 
                     {/* 닫기 버튼 */}
                     <button
@@ -337,7 +337,7 @@ export default function GallerySection({ images, className }: Props) {
                     </button>
 
                     {/* 하단 장수 표시 */}
-                    <div className="absolute bottom-5 left-1/2 z-20 -translate-x-1/2">
+                    <div className="absolute bottom-3 left-1/2 z-20 -translate-x-1/2">
                         <div className="font-gowun-batang text-[12px] font-medium tracking-[0.02em] text-[#6b6966]">
                             &lt;&nbsp; {activeIndex + 1} / {finalImages.length} &nbsp;&gt;
                         </div>
