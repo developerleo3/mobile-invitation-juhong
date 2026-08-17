@@ -86,7 +86,7 @@ export default function WeddingDaySection() {
                             </div>
 
                             {/* 날짜 */}
-                            <div className="grid grid-cols-7 gap-y-1.5 text-[11px] font-noto-sans-kr font-light">
+                            <div className="grid grid-cols-7 gap-y-0.5 text-[11px] font-noto-sans-kr font-light">
                                 {cells.map((d, i) => {
                                     const col = i % 7; // 0=Sun
                                     const isSunday = col === 0;
@@ -98,7 +98,7 @@ export default function WeddingDaySection() {
                                         <div key={`d-${i}`} className="flex justify-center">
                                             <div
                                                 className={[
-                                                    "h-7 w-7 flex items-center justify-center rounded-full",
+                                                    "h-10 w-7 flex items-center justify-center rounded-full",
                                                     isHighlight
                                                         ? "bg-[#A80000] text-white font-noto-sans-kr font-semibold"
                                                         : isSunday
