@@ -5,12 +5,11 @@ import CountUpNumber from "@/src/components/CountUpNumber";
 import FadeInOnView from "@/src/components/FadeInOnView";
 
 export default function WeddingDaySection() {
-    // TODO: 웨딩데이는 FadeInOnView 빼기
     // D-day 계산 (컴포넌트 내부로 이동)
     const diffDays = useMemo(() => {
         if (typeof window === "undefined") return 0;
 
-        const wedding = new Date("2026-05-09T18:30:00+09:00");
+        const wedding = new Date("2026-10-17T11:00:00+09:00");
         const now = new Date();
 
         const start = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
@@ -39,10 +38,10 @@ export default function WeddingDaySection() {
             <FadeInOnView>
                 <div className="mt-7">
                     <div className="text-[13px] font-noto-sans-kr font-semibold">
-                        2026년 5월 9일 토요일 | 오후 6시 30분
+                        2026년 10월 17일 토요일 | 오전 11시
                     </div>
                     <div className="mt-2 text-[11px] text-[#ADA9A9] font-gowun-batang font-bold">
-                        Saturday, May 9, 2026. PM 6:30
+                        Saturday, Oct 17, 2026. AM 11:00
                     </div>
                 </div>
             </FadeInOnView>
@@ -55,8 +54,8 @@ export default function WeddingDaySection() {
             {/* 달력 */}
             {(() => {
                 const year = 2026;
-                const monthIndex = 4; // 0-based: 4 = May
-                const highlightDay = 9;
+                const monthIndex = 9; // 0-based: 4 = May
+                const highlightDay = 17;
 
                 const firstDay = new Date(year, monthIndex, 1).getDay(); // 0=Sun
                 const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
@@ -70,7 +69,7 @@ export default function WeddingDaySection() {
 
                 return (
                     <FadeInOnView>
-                        <div className="mt-10 mx-auto w-full max-w-md rounded-[10px] bg-white shadow-[0_0_1px_0px_rgba(255,255,255,0.1)]">
+                        <div className="mt-10 pb-3 mx-auto w-full max-w-md rounded-[10px] bg-white shadow-[0_0_1px_0px_rgba(255,255,255,0.1)]">
 
                             {/*<p className="my-3 font-bold font-gowun-batang">May. 2026</p>*/}
 
@@ -126,7 +125,7 @@ export default function WeddingDaySection() {
             {/* D-day */}
             <FadeInOnView>
                 <div className="mt-10 text-[14px] font-gowun-batang font-bold">
-                    성택 · 현정 결혼식{" "} <span className="text-[#A80000]">D-</span>
+                    주홍 · 미향 결혼식이 {" "} <span className="text-[#A80000]"></span>
                     <CountUpNumber
                         to={diffDays ?? 0}
                         from={0}
@@ -137,6 +136,7 @@ export default function WeddingDaySection() {
                         once
                         className="text-[#A80000] font-black"
                     />
+                    <span className="text-[#A80000]">일</span> 남았습니다.
                 </div>
             </FadeInOnView>
         </section>
