@@ -4,7 +4,7 @@ export default function Footer() {
             <div className="space-y-1.5 font-noto-sans-kr text-[10px] leading-relaxed">
                 <p>Leeflow designstudio</p>
                 <p>
-                    청첩장 관련 문의 |{" "}
+                    청첩장 제작 관련 문의 |{" "}
                     <a
                         href="mailto:leeflow_designstudio@naver.com"
                         className="underline underline-offset-2"
