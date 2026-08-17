@@ -4,15 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const images = [
-    "/images/main/main01.jpg",
-    "/images/main/main02.jpg",
-    "/images/main/main03.jpg",
-    "/images/main/main04.jpg",
-    "/images/main/main05.jpg",
-    "/images/main/main06.jpg",
-    "/images/main/main07.jpg",
-    "/images/main/main08.jpg",
-    "/images/main/main09.jpg",
+    "/images/main/main1.jpg",
 ];
 
 type Props = {
