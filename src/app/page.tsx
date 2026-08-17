@@ -155,7 +155,7 @@ export default function Home() {
                 <WithLoveSection copyText={copyText} />
 
                 {/* section7 - Message */}
-                <MessageSection showToast={showToast} />
+                {/*<MessageSection showToast={showToast} />*/}
 
                 {/* section8 - Information */}
                 {/*<InformationSection />*/}
