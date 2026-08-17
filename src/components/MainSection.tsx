@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const images = [
-    "/images/main/main1.jpg",
+    "/images/main/main.jpg",
 ];
 
 type Props = {
