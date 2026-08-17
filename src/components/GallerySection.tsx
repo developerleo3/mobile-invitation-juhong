@@ -18,7 +18,7 @@ const preventDefault = (e: React.SyntheticEvent) => {
 
 export default function GallerySection({ images, className }: Props) {
     const defaultImages = useMemo(
-        () => Array.from({ length: 40 }, (_, i) => `/images/gallery/gallery_${i + 1}.jpg`),
+        () => Array.from({ length: 17 }, (_, i) => `/images/gallery/gallery${i + 1}.jpg`),
         []
     );
 
