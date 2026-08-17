@@ -133,7 +133,7 @@ export default function WithLoveSection({
     ];
 
     const brideAccounts: AccountItem[] = [
-        {role: "신부", name: "최미향", bank: "국민", account: "453014-52-249687"},
+        {role: "신부", name: "최미향", bank: "농협", account: "453014-52-249687"},
         {role: "신부 아버지", name: "최종구", bank: "신협", account: "132-106-160188"},
         {role: "신부 어머니", name: "박준하", bank: "농협", account: "415-02-385621"},
     ];
