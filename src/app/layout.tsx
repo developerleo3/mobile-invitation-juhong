@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         siteName: "10월 17일 (토요일) 오전 11시",
         images: [
             {
-                url: "/images/gallery/gallery12.jpg",
+                url: "/images/thum_img.jpg",
                 width: 1200,
                 height: 630,
                 alt: "주홍 미향 결혼식",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "주홍🖤미향 결혼합니다",
         description: "10월 17일 (토요일) 오전 11시",
-        images: ["/images/gallery/gallery12.jpg"],
+        images: ["/images/thum_img.jpg"],
     },
 };
 
