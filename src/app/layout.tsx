@@ -39,7 +39,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://taekjung.leeflowdesign.com"),
+    metadataBase: new URL("https://honghyang.leeflowdesign.com"),
 
     title: "주홍🖤미향 결혼합니다",
     description: "10월 17일 (토요일) 오전 11시",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "주홍🖤미향 결혼합니다",
         description: "10월 17일 (토요일) 오전 11시",
-        images: ["/images/url_img.jpg"],
+        images: ["/images/gallery/gallery12.jpg"],
     },
 };
 
