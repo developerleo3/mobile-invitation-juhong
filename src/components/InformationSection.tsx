@@ -5,7 +5,7 @@ import FadeInOnView from "@/src/components/FadeInOnView";
 
 export default function InformationSection() {
     const [infoPage, setInfoPage] = useState(0); // 0 or 1
-    const INFO_TOTAL = 3;
+    const INFO_TOTAL = 1;
 
     // 스와이프 추가
     const touchStartX = useRef<number | null>(null);
@@ -69,39 +69,41 @@ export default function InformationSection() {
                                     style={{ transform: `translateX(-${infoPage * (100 / INFO_TOTAL)}%)` }}
                                 >
                                     {/* page 1 */}
-                                    <div className="w-1/3 shrink-0 px-6 pt-7 h-[330px] flex flex-col">
-                                        <p className="font-noto-sans-kr text-[13px] font-semibold text-black">
-                                            [ 단독 건물 좌석 안내 ]
-                                        </p>
+                                    <div className="w-1/3 shrink-0 px-6 h-[330px] grid grid-rows-2 relative">
 
-                                        <div className="h-[80px] flex items-center justify-center">
-                                            <p className="font-nanum-myeongjo text-[11.5px] font-bold text-center">
-                                                1부 예식 후 식사는 1층,
-                                                <br />
-                                                예식과 동시에 식사는 2층
-                                                <span className="font-normal">에 착석해주시기 바랍니다.</span>
+                                        {/* 식사 안내 */}
+                                        <div className="flex flex-col justify-center">
+                                            <p className="font-noto-sans-kr text-[13px] font-semibold text-black mb-5">
+                                                [ 식사 안내 ]
                                             </p>
+
+                                            <div className="flex justify-center">
+                                                <p className="font-nanum-myeongjo text-[11.5px] font-bold text-left">
+                                                    · 위치 : 2층 연회장 (팰리스홀 바로 옆)
+                                                    <br />
+                                                    · 시간 : 10:30 ~ 13:00
+                                                    <br />
+                                                    (예식 30분 전부터 이용 가능합니다.)
+                                                </p>
+                                            </div>
                                         </div>
 
-                                        <div className="mx-auto w-full border-t border-dashed border-[#AC5344]" />
+                                        {/* 가운데 구분선 */}
+                                        <div className="absolute mx-7 left-0 right-0 top-1/2 border-t border-dashed border-[#AC5344]" />
 
-                                        <div className="flex-1 flex items-center justify-center">
-                                            <p className="font-gowun-batang text-[11px] text-black text-center">
-                                                저희 결혼식은 단독 건물에서
-                                                <br />
-                                                1부와 2부로 나뉘어 진행됩니다.
-                                                <br />
-                                                <br />
-                                                1층은 1부 예식 종료 후
-                                                <br />
-                                                2부 시작과 함께 식사가 가능하며,
-                                                <br />
-                                                2층은 1부 예식 중에도 식사 이용이 가능합니다.
+                                        {/* 주차 안내 */}
+                                        <div className="flex flex-col justify-center">
+                                            <p className="font-noto-sans-kr text-[13px] font-semibold text-black mb-5">
+                                                [ 주차 안내 ]
+                                            </p>
+
+                                            <p className="font-nanum-myeongjo text-[11.5px] font-bold text-center">
+                                                웨딩홀 주차장은 당일 무료입니다.
                                                 <br />
                                                 <br />
-                                                층별 안내에 따라 편하게 이용해주시기 바라며,
+                                                도착 시 주차요원의 안내에 따라 입차해 주시기 바라며,
                                                 <br />
-                                                즐거운 시간 보내실 수 있도록 준비하겠습니다.
+                                                별도의 주차 정산 없이 출차 가능합니다.
                                             </p>
                                         </div>
                                     </div>
@@ -182,7 +184,7 @@ export default function InformationSection() {
                         </div>
 
                         {/* 하단 네비게이션 */}
-                        <div className="flex items-center justify-center gap-4 pb-4">
+                        {/*<div className="flex items-center justify-center gap-4 pb-4">
                             <button
                                 type="button"
                                 onClick={goPrevInfo}
@@ -212,7 +214,7 @@ export default function InformationSection() {
                             >
                                 {">"}
                             </button>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </FadeInOnView>
