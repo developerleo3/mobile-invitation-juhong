@@ -158,7 +158,7 @@ export default function Home() {
                 {/*<MessageSection showToast={showToast} />*/}
 
                 {/* section8 - Information */}
-                {/*<InformationSection />*/}
+                <InformationSection />
 
                 {/* section9 - RSVP */}
                 <RsvpSection

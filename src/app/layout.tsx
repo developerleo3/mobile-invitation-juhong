@@ -41,19 +41,19 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
     metadataBase: new URL("https://taekjung.leeflowdesign.com"),
 
-    title: "성택🖤현정 결혼합니다",
-    description: "5월 9일 (토요일) 오후 6시 30분",
+    title: "주홍🖤미향 결혼합니다",
+    description: "10월 17일 (토요일) 오전 11시",
 
     openGraph: {
-        title: "성택 ෆ 현정 결혼합니다",
+        title: "주홍🖤미향 결혼합니다",
         description: "5월 9일 (토요일) 오후 6시 30분",
-        siteName: "성택🖤현정 모바일 청첩장",
+        siteName: "10월 17일 (토요일) 오전 11시",
         images: [
             {
-                url: "/images/url_img.jpg",
+                url: "/images/gallery/gallery12.jpg",
                 width: 1200,
                 height: 630,
-                alt: "성택 현정 결혼식",
+                alt: "주홍 미향 결혼식",
             },
         ],
         locale: "ko_KR",
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "성택🖤현정 결혼합니다",
-        description: "5월 9일 (토요일) 오후 6시 30분",
+        title: "주홍🖤미향 결혼합니다",
+        description: "10월 17일 (토요일) 오전 11시",
         images: ["/images/url_img.jpg"],
     },
 };
