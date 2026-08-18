@@ -160,7 +160,7 @@ export default function RsvpSection({ showToast, open, onOpen, onClose }: Props)
                 note: trimmedNote || null,
             };
 
-            const { data, error } = await supabase.from("rsvps").insert(payload);
+            const { data, error } = await supabase.from("juhong_rsvps").insert(payload);
 
             if (error) {
                 console.error("[RSVP insert error]", {
