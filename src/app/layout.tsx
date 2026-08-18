@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
     openGraph: {
         title: "주홍🖤미향 결혼합니다",
-        description: "5월 9일 (토요일) 오후 6시 30분",
+        description: "10월 17일 (토요일) 오전 11시",
         siteName: "10월 17일 (토요일) 오전 11시",
         images: [
             {
