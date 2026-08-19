@@ -41,11 +41,11 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
     metadataBase: new URL("https://honghyang.leeflowdesign.com"),
 
-    title: "주홍🖤미향 결혼합니다",
+    title: "주홍❤️미향 결혼합니다",
     description: "10월 17일 (토요일) 오전 11시",
 
     openGraph: {
-        title: "주홍🖤미향 결혼합니다",
+        title: "주홍❤️미향 결혼합니다",
         description: "10월 17일 (토요일) 오전 11시",
         siteName: "10월 17일 (토요일) 오전 11시",
         images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "주홍🖤미향 결혼합니다",
+        title: "주홍❤️미향 결혼합니다",
         description: "10월 17일 (토요일) 오전 11시",
         images: ["/images/thum_img.jpg"],
     },
